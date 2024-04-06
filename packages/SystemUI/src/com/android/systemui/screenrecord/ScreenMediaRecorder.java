@@ -64,7 +64,7 @@ public class ScreenMediaRecorder {
     private static final int TOTAL_NUM_TRACKS = 1;
     private static final int VIDEO_FRAME_RATE = 60;
     private static final int VIDEO_FRAME_RATE_TO_RESOLUTION_RATIO = 6;
-    private static final int LOW_VIDEO_BIT_RATE = 3000000;
+    private static final int LOW_VIDEO_BIT_RATE = 10000000;
     private static final int AUDIO_BIT_RATE = 196000;
     private static final int AUDIO_SAMPLE_RATE = 44100;
     private static final int MAX_DURATION_MS = 60 * 60 * 1000;
@@ -229,7 +229,7 @@ public class ScreenMediaRecorder {
      * Store recorded video
      */
     protected SavedRecording save() throws IOException {
-        String fileName = new SimpleDateFormat("'screen-'yyyyMMdd-HHmmss'.mp4'")
+        String fileName = new SimpleDateFormat("'guidix-'yyyyMMdd-HHmmss'.mp4'")
                 .format(new Date());
 
         ContentValues values = new ContentValues();
